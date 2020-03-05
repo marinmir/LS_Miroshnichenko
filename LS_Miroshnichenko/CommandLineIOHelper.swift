@@ -14,6 +14,12 @@ enum OutputType {
     case error
 }
 
+enum  LsArguments: String {
+    case h = "-h"
+    case a = "-a"
+    case l = "-l"
+}
+
 class CommandLineIOHelper {
         
     func input() -> [String] {

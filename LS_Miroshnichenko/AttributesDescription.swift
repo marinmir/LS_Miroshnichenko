@@ -11,14 +11,14 @@ import Foundation
 class AttributesDescription: CustomStringConvertible {
     
     var description: String {
-        return "\(creationDate)     \(fileSize)"
+        return "\(creationDate?.description ?? "Unkhown date")     \(fileSize?.description ?? "Unknow size")"
     }
     
-    var creationDate: Date
-    var fileSize: UInt
+    var creationDate: Date?
+    var fileSize: UInt?
     
-    init(attributes: [FileAttributeKey : Any]?) {
-        creationDate = attributes![FileAttributeKey.creationDate]! as! Date
-        fileSize = attributes![FileAttributeKey.size]! as! UInt
+    init(attributes: [FileAttributeKey : Any]) {
+        creationDate = attributes[FileAttributeKey.creationDate] as? Date
+        fileSize = attributes[FileAttributeKey.size] as? UInt
     }
 }

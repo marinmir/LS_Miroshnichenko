@@ -11,14 +11,12 @@ import Foundation
 // include hidden files
 extension FileManager {
     func urls(for directory: String, skipsHiddenFiles: Bool = true ) -> [URL]? {
-        return try? FileManager.default.contentsOfDirectory(at: URL(fileURLWithPath: directory), includingPropertiesForKeys: nil, options: skipsHiddenFiles ? .skipsHiddenFiles : [] )
+        return try? contentsOfDirectory(at: URL(fileURLWithPath: directory), includingPropertiesForKeys: nil, options: skipsHiddenFiles ? .skipsHiddenFiles : [] )
     }
-}
 
-extension URL {
-var attributes: [FileAttributeKey : Any]? {
+    func fileAttributes(filePath path: String) -> [FileAttributeKey : Any]? {
         do {
-            return try FileManager.default.attributesOfItem(atPath: path)
+            return try attributesOfItem(atPath: path)
         } catch let error as NSError {
             print("FileAttribute error: \(error)")
         }

@@ -36,14 +36,11 @@ guard let urls = fileManager.urls(for: currentDirectoryPath, skipsHiddenFiles: s
 
 let shouldPrintAttributes = lsArguments.contains(.l)
 
-if shouldPrintAttributes {
-    for url in urls {
-        let attributes = fileManager.fileAttributes(filePath: url.path) ?? [:]
-        
-        clHelper.output(outputText: "\(AttributesDescription(attributes: attributes))   \(url.relativePath)", outputType: .message)
-    }
-} else {
-    for url in urls {
-        clHelper.output(outputText: "\(url.relativePath)", outputType: .message)
-    }
+for url in urls {
+    let attributes = AttributesDescription(attributes: fileManager.fileAttributes(filePath: url.absoluteString) ?? [:])
+    
+    let text = shouldPrintAttributes ? "\(attributes)   \(url.relativePath)" :
+                                       "\(url.relativePath)"
+    clHelper.output(outputText: text, outputType: .message)
 }
+

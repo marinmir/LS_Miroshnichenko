@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0E375185240EE900002E4ABB /* CommandLineIOHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E375184240EE900002E4ABB /* CommandLineIOHelper.swift */; };
+		0E375187240EEA52002E4ABB /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E375186240EEA52002E4ABB /* Extensions.swift */; };
+		0E375189240EEBB2002E4ABB /* AttributesDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E375188240EEBB2002E4ABB /* AttributesDescription.swift */; };
 		0E67368F240C807A00007274 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E67368E240C807A00007274 /* main.swift */; };
 /* End PBXBuildFile section */
 
@@ -23,6 +26,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0E375184240EE900002E4ABB /* CommandLineIOHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandLineIOHelper.swift; sourceTree = "<group>"; };
+		0E375186240EEA52002E4ABB /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		0E375188240EEBB2002E4ABB /* AttributesDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttributesDescription.swift; sourceTree = "<group>"; };
 		0E67368B240C807A00007274 /* LS_Miroshnichenko */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = LS_Miroshnichenko; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E67368E240C807A00007274 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -58,6 +64,9 @@
 			isa = PBXGroup;
 			children = (
 				0E67368E240C807A00007274 /* main.swift */,
+				0E375184240EE900002E4ABB /* CommandLineIOHelper.swift */,
+				0E375186240EEA52002E4ABB /* Extensions.swift */,
+				0E375188240EEBB2002E4ABB /* AttributesDescription.swift */,
 			);
 			path = LS_Miroshnichenko;
 			sourceTree = "<group>";
@@ -121,6 +130,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				0E67368F240C807A00007274 /* main.swift in Sources */,
+				0E375189240EEBB2002E4ABB /* AttributesDescription.swift in Sources */,
+				0E375187240EEA52002E4ABB /* Extensions.swift in Sources */,
+				0E375185240EE900002E4ABB /* CommandLineIOHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
